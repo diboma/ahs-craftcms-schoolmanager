@@ -1,0 +1,19 @@
+columnSuffix: rarcgclm
+contentColumnType: text
+fieldGroup: 6e9d9f61-2783-4811-9453-6b8463e10253 # Nieuws
+handle: writer
+instructions: null
+name: Auteur
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

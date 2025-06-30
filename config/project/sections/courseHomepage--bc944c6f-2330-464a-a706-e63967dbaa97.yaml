@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: courseHomepage
+name: 'Cursussen overzichtspagina'
+propagationMethod: all
+siteSettings:
+  9af05224-5be5-4ac1-8f64-727b7fbee4d3: # MySchool
+    enabledByDefault: true
+    hasUrls: true
+    template: courses/index.twig
+    uriFormat: cursussen
+type: single

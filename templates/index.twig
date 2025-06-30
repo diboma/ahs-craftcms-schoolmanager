@@ -1,0 +1,84 @@
+{# ================================================================ #}
+{# Props #}
+{# ================================================================ #}
+{% set path = craft.app.request.getSegment(1) %}
+{% set article = craft.entries({section: "news", orderBy: "id desc", limit: 2}).one() %}
+{% set departments = craft.categories().group('departments').all() %}
+
+{# Get banner text #}
+{% set bannerTextParams = {
+  section: 'bannerTexts',
+  orderBy: 'id desc',
+} %}
+{% set bannerText = craft.entries(bannerTextParams).one() %}
+
+{# Set tailwind classes for banner text background color #}
+{% set bannerTxtBgClasses = [
+  "bg-#{bannerText.color.value}-700",
+  'bg-opacity-60',
+  'mx-auto',
+  'p-4',
+  'rounded',
+  'text-center',
+] %}
+
+{# Get banner image #}
+{% set bannerImageParams = {
+  section: 'bannerImages',
+  orderBy: 'id desc',
+}%}
+{% set bannerImage = craft.entries(bannerImageParams).one() %}  
+{# {% set bannerImageUrl = bannerImage.bannerImage.one.url %} #}
+{% set bannerImageUrl = bannerImage.bannerImage.one.getUrl('banner') %}
+{% set bannerImagePosition = bannerImage.imagePosition.value %}
+
+{# Set tailwind classes for banner background image #}
+{% set bannerBgImageClasses = [
+  'bg-cover',
+  'bg-no-repeat',
+  "bg-#{bannerImagePosition}",
+  'aspect-video',
+  'h-80',
+  'md:h-96',
+  'lg:h-[448px]',
+  'xl:h-[512px]',
+  '2xl:h-[576px]',
+  'flex',
+  'justify-center',
+  'items-center',
+] %}
+
+{# ================================================================ #}
+{# Template #}
+{# ================================================================ #}
+{% extends "_layouts/base.twig" %}
+
+{% block main %}
+
+{# Hero #}
+<section class="{{bannerBgImageClasses|join(' ')}}" style="background-image: url('{{bannerImageUrl}}')">      
+  <div class="{{bannerTxtBgClasses|join(' ') }}">
+    <h2 class="mb-2 text-center text-white text-xl md:text-4xl lg:text-">
+      {{ bannerText.text|nl2br }}
+    </h2>
+    <h3 class="mt-2 mb-6 text-center text-white text-base sm:text-lg md:text-xl lg:text-2xl">
+      {{ bannerText.subtitle }}
+    </h3>
+    <a href="{{url('/cursussen')}}" class="btn btn-secondary">Bekijk onze cursussen</a>
+  </div>
+</section>
+
+{# News #}
+{% if article %}
+  <article class="bg-slate-100 p-4 text-center article-text text-teal-700">
+    <span class="uppercase">Nieuws in de kijker:</span>
+    <a href="{{ article.url }}" class="visited:text-teal-700">{{ article.title }}</a>    
+  </article>
+{% endif %}
+
+{# Departments #}
+<main class="tw-container mt-4">
+  {% include "_components/department-list.twig" %}
+</main>
+
+{% endblock %}

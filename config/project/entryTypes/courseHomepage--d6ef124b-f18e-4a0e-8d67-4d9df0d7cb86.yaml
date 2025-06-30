@@ -1,0 +1,46 @@
+fieldLayouts:
+  b8a5cc33-3594-424d-aa83-51c3195146ed:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 529fdffa-d95c-4caf-9bec-703a02a7c96e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9f708b1a-63c8-4a6a-bb9a-4ef4c9a36457
+        userCondition: null
+handle: courseHomepage
+hasTitleField: false
+name: 'Cursussen overzichtspagina'
+section: bc944c6f-2330-464a-a706-e63967dbaa97 # Cursussen overzichtspagina
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

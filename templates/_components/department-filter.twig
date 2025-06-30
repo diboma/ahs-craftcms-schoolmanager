@@ -1,0 +1,23 @@
+<nav>
+  <ul class="bg-slate-100 p-1 rounded flex flex-row flex-wrap justify-center mb-6 text-sm">
+    {# Icon #}
+    {% if filterId is not null %}
+      <a href="{{ url('/cursussen') }}" class="mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </a>
+    {% else %}
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+      </svg>
+    {% endif %}
+
+    {# Filters #}
+    {% for department in departments %}
+      <li class="mx-1 px-1 hover:text-teal-700 {% if filterId == department.id %}bg-teal-50 text-teal-700 font-semibold{% endif %}">
+        <a href="{{ url('/cursussen?fid=' ~ department.id) }}">{{ department.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

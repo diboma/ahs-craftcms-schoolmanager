@@ -1,0 +1,46 @@
+defaultPlacement: end
+fieldLayouts:
+  4c3103f9-c98c-48c2-b0bc-25da60f478e7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Naam
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 0b58d4b1-342e-4437-b7a7-375ae9f21242
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5b7ed853-d5ff-47ef-b28d-e4f22a35e79d
+        userCondition: null
+handle: roles
+name: Rollen
+siteSettings:
+  9af05224-5be5-4ac1-8f64-727b7fbee4d3: # MySchool
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 49f86200-d998-49de-817a-5818df6bc2ce

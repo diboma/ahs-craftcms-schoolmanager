@@ -1,0 +1,16 @@
+<p>
+Beste,<br><br>
+Hartelijk dank voor jouw bericht.<br>
+We nemen zo snel mogelijk contact met je op.<br><br>
+We ontvingen de volgende gegevens:<br>
+</p>
+<div>
+  <div><strong>Naam:</strong> {{submission.fromName}}</div>
+  <div><strong>E-mail:</strong> {{submission.fromEmail}}</div>
+  <div><strong>Onderwerp:</strong> {{submission.subject}}</div>
+  <div><strong>Bericht:</strong></div>
+  <div style="margin-top: .5rem; max-width: 45rem">{{submission.message|join("")|escape}}</div>
+</div>
+<p>&nbsp;</p>
+<p>Met vriendelijke groeten</p>
+<p><img src="{{siteUrl('/images/logo.png')}}" alt="logo"></p>

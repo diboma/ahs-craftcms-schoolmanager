@@ -1,0 +1,54 @@
+<header class="min-h-[120px] py-4 border-b-2 border-teal-600 shadow-md">
+  <div class="tw-container">
+    <div class="flex justify-between items-center">   
+      {# Logo #}
+      <a href="{{url('/')}}" class="flex items-center gap-2">
+        <img src="{{url('/images/logo.png') }}" alt="logo" class="w-36">
+      </a>
+      {# Menu toggler #}
+      <div class="px-4 cursor-pointer block md:hidden" id="menu-toggler">
+        <svg id="menu-toggler-icon-closed" class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+        <svg id="menu-toggler-icon-opened" class="w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+
+      </div>
+    </div>
+    {# Menu #}
+    <ul id="menu" class="pt-4 flex flex-col items-end sm:flex-row sm:justify-end gap-2 hidden md:flex md:gap-4 md:pt-0 md:-mt-12 font-bold text-slate-600">
+      <li>
+        <a href="{{ url('afdelingen') }}" 
+          class="btn hover:text-teal-700 {% if path == 'afdelingen' %} btn-primary hover:text-white {% endif %} ">
+          Afdelingen
+        </a>
+      </li>
+      <li>
+        <a href="{{ url('cursussen') }}" 
+          class="btn hover:text-teal-700 {% if path == 'cursussen' %} btn-primary hover:text-white {% endif %} ">
+          Cursussen
+        </a>
+      </li>
+      <li>
+        <a href="{{ url('nieuws') }}" 
+          class="btn hover:text-teal-700 {% if path == 'nieuws' %} btn-primary hover:text-white {% endif %} ">
+          Nieuws
+        </a>
+      </li>
+      <li>
+        <a href="{{ url('info') }}" 
+          class="btn hover:text-teal-700 {% if entry is defined and entry.section.handle == 'info' %} btn-primary hover:text-white {% endif %} ">
+          Info
+        </a>
+      </li>
+      <li>
+        <a href="{{ url('contact') }}" 
+          class="btn hover:text-teal-700 {% if path == 'contact' %} btn-primary hover:text-white {% endif %} ">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+

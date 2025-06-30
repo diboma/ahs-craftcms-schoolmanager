@@ -1,0 +1,58 @@
+defaultPlacement: end
+fieldLayouts:
+  3423cfeb-bcda-44db-aba4-52e0038e1baf:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Naam
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 4795d069-436a-4dc0-a610-4fb048ff27d0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 36ea4729-9f62-45f6-8f07-c3631979cd74 # Afdelingsafbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7f145403-b061-45f9-8ea0-6754045073c4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ccce0e26-bee8-403c-802d-e987d175e8b2
+        userCondition: null
+handle: departments
+name: Afdelingen
+siteSettings:
+  9af05224-5be5-4ac1-8f64-727b7fbee4d3: # MySchool
+    hasUrls: true
+    template: departments/_entry.twig
+    uriFormat: 'afdelingen/{slug}'
+structure:
+  maxLevels: 1
+  uid: 5eb5dd1b-7b23-4055-9a84-6e91c37ade88

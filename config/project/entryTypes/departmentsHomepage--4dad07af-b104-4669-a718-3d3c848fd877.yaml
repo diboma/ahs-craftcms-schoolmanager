@@ -1,0 +1,46 @@
+fieldLayouts:
+  74c322d2-5858-419e-876f-4b54549e5f4c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 4a11cac0-e92f-428d-9dc4-e832d511e206
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 00bf57a5-2048-4d01-8d7b-2d6d0436d953
+        userCondition: null
+handle: departmentsHomepage
+hasTitleField: false
+name: 'Afdelingen overzichtspagina'
+section: 06b8480d-3069-4a9f-a462-4ec7d12948de # Afdelingen overzichtspagina
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,21 @@
+{# ================================================================ #}
+{# Props #}
+{# ================================================================ #}
+{% set departments = craft.categories().group('departments').all() %}
+
+{# ================================================================ #}
+{# Template #}
+{# ================================================================ #}
+{% extends "_layouts/base.twig" %}
+
+{% block main %}
+
+<main class="tw-container mt-6">
+
+  <h1 class="mb-6 text-center">Onze afdelingen</h1>
+
+  {% include "_components/department-list.twig" %}
+
+</main>
+
+{% endblock %}

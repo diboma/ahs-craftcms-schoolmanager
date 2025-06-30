@@ -1,0 +1,25 @@
+{% if type == 'info' %}
+  {% set bgColor = 'bg-cyan-100' %}
+  {% set txtColor = 'text-cyan-600' %}
+{% endif %}
+{% if type == 'warning' %}
+  {% set bgColor = 'bg-amber-200' %}
+  {% set txtColor = 'text-amber-600' %}
+{% endif %}
+{% if type == 'danger' %}
+  {% set bgColor = 'bg-red-100' %}
+  {% set txtColor = 'text-red-500' %}
+{% endif %}
+{% if type == 'error' %}
+  {% set bgColor = 'bg-red-100' %}
+  {% set txtColor = 'text-red-500' %}
+{% endif %}
+{% if type == 'theme' %}
+  {% set bgColor = 'bg-teal-100' %}
+  {% set txtColor = 'text-teal-600' %}
+{% endif %}
+
+<p class="my-4 max-w-md mx-auto p-2 rounded font-semibold text-center text-lg 
+          {{txtColor|default('text-slate-700')}} {{bgColor|default('bg-slate-100')}}">
+  {{message}}
+</p>

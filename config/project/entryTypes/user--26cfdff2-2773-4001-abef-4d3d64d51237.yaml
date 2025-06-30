@@ -1,0 +1,82 @@
+fieldLayouts:
+  6301578f-de06-4964-9637-2c74c9de17f7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Naam
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: fc3ce442-364b-441b-80e2-0dcb1451854a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 94a3b862-0402-4a98-8d6b-d6ea3e11811e # E-mailadres
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4671f7d1-342e-4f42-ae5f-b175b3d1bb4b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4ed5ab05-29bd-4679-8cc2-be6ff9740eb8 # Avatar
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 57619b7f-8eb6-4594-9022-5c19b4024950
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 35321f2d-97c5-43cc-a7a3-482d2bc42fc3 # Rol
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c56ffb29-48a4-476d-a288-ac22870e4d7c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1fbbc3dd-080b-4afc-9b9c-3d59b0936c52
+        userCondition: null
+handle: user
+hasTitleField: true
+name: Gebruiker
+section: 69582cc7-d647-4240-a3e9-d9557b1d62d1 # Gebruikers
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

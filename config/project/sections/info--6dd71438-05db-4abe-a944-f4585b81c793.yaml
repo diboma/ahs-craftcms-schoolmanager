@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: info
+name: Info
+propagationMethod: all
+siteSettings:
+  9af05224-5be5-4ac1-8f64-727b7fbee4d3: # MySchool
+    enabledByDefault: true
+    hasUrls: true
+    template: info.twig
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: 3c20a7b3-0817-418b-aa66-c54104a6fcd7
+type: structure

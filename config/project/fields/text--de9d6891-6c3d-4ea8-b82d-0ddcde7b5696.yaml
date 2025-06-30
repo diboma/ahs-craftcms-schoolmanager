@@ -1,0 +1,19 @@
+columnSuffix: mjwhikpb
+contentColumnType: text
+fieldGroup: dd42cf6b-e419-4f02-8749-501bd50e3efd # Common
+handle: text
+instructions: null
+name: Tekst
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 2
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

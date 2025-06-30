@@ -1,0 +1,90 @@
+columnSuffix: znimexty
+contentColumnType: string(7)
+fieldGroup: dd42cf6b-e419-4f02-8749-501bd50e3efd # Common
+handle: color
+instructions: null
+name: Kleur
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - blauwgroen
+        -
+          - value
+          - teal
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - grijs
+        -
+          - value
+          - slate
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - steenkleur
+        -
+          - value
+          - stone
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - limoen
+        -
+          - value
+          - lime
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - groen
+        -
+          - value
+          - green
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - smaragdgroen
+        -
+          - value
+          - emerald
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - cyaan
+        -
+          - value
+          - cyan
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

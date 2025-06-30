@@ -1,0 +1,70 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 1349ef6d-2683-4de4-8756-f2eebe8fbc19 # Cursussen
+handle: teacher
+instructions: null
+name: Leerkracht
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: 3
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\entries\TypeConditionRule
+              -
+                - uid
+                - 37fda160-4198-4cd8-ac05-9b5ec9ad0e97
+              -
+                - operator
+                - in
+              -
+                - values
+                -
+                  - 26cfdff2-2773-4001-abef-4d3d64d51237 # Gebruiker
+          -
+            __assoc__:
+              -
+                - class
+                - craft\fields\conditions\RelationalFieldConditionRule
+              -
+                - uid
+                - aa528d0a-0a57-464d-8650-f2e23facba46
+              -
+                - operator
+                - relatedTo
+              -
+                - elementId
+                - '59'
+              -
+                - fieldUid
+                - 35321f2d-97c5-43cc-a7a3-482d2bc42fc3 # Rol
+  selectionLabel: 'Selecteer de leerkracht (meerdere mogelijjk, maximum 3)'
+  showSiteMenu: true
+  sources:
+    - 'section:69582cc7-d647-4240-a3e9-d9557b1d62d1' # Gebruikers
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

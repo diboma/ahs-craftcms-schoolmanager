@@ -1,0 +1,82 @@
+fieldLayouts:
+  2ebc0e02-8db7-43ae-8b3a-ac9b6fe2fa26:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Titel
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 1c9ad3c0-300b-49f8-9098-70ab55d6ecb0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: efa1ffb4-d574-4b17-a07e-e5bb2248fdb8 # Ondertitel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 529fa065-6ad4-4c85-8821-a591e5db4872
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a2eafd56-9d04-4652-a39a-818b035b1dc0 # Auteur
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 573e12a1-5855-476c-b7a3-18747b3e7232
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f3797235-3342-4713-ab42-6c67225eddf4 # Artikelinhoud
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7be2313e-c0ce-4beb-99ff-df113c4dee6a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b5a58523-6a79-49ed-92b3-1e214b580201
+        userCondition: null
+handle: article
+hasTitleField: true
+name: Article
+section: 69e90884-4916-462f-b793-fc4c7f447f3a # Nieuws
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

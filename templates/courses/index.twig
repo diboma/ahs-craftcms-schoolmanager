@@ -1,0 +1,69 @@
+{# ================================================================ #}
+{# Props #}
+{# ================================================================ #}
+{% set path = craft.app.request.getSegment(1) %}
+{% set filterId = craft.app.request.getQueryParam('fid') %}
+{% set departments = craft.categories().group('departments').all() %}
+
+{# {% set departmentTest = craft.categories({id: 32}).one() %}
+{% dd departmentTest %} #}
+
+{% set queryParams = {
+  section: 'courses',
+  orderBy: 'title asc',
+  limit: 12,
+} %}
+
+{% if filterId is not null %}
+  {% set queryParams = queryParams|merge({department: filterId}) %}
+{% endif %}
+
+{# {% set courses = craft.entries(queryParams).all() %} #}
+
+{% set courseQuery = craft.entries(queryParams) %}
+{% paginate courseQuery as pageInfo, courses %}
+
+{# ================================================================ #}
+{# Template #}
+{# ================================================================ #}
+{% extends "_layouts/base.twig" %}
+
+{% block main %}
+
+<main class="tw-container mt-6">
+
+  <h1 class="mb-6 text-center">Onze cursussen</h1>
+
+  {# Filters #}
+  {% if departments is defined and departments|length > 0 %}
+    {% include '_components/department-filter.twig' %}
+  {% endif %}
+
+  {# List of courses #}
+  {% if not courses or courses|length == 0 %}
+    {% include "_components/alert.twig" with { 
+      type: 'info', message: 'Sorry, geen cursussen gevonden :-('
+    } %}
+  {% else %}
+    <ul class="flex flex-row flex-wrap justify-center gap-6">
+      {% for course in courses %}
+        {% set courseImage = course.courseImage.one() %}
+        <li class="relative w-[15rem] card">
+          <a href="{{ course.url }}" class="p-2 h-full flex justify-start items-center gap-2 visited:text-teal-700">
+            {% if courseImage %}
+              <img src="{{ courseImage.getUrl('w80') }}" alt="{{ courseImage.alt }}" 
+                   class="w-[5rem] max-h-[5rem] aspect-square object-contain object-center" />
+            {% endif %}
+            <div class="font-medium">{{ course.title }}</div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {# Navigation #}
+    {% include "_components/pagination.twig" %}
+  {% endif %}
+
+</main>
+
+{% endblock %}

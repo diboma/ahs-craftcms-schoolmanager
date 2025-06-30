@@ -1,0 +1,66 @@
+fieldLayouts:
+  226eceb2-7486-4137-bf14-49ca2e59d8a4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Naam
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: ef698a54-e80a-4b8d-a429-716c2f9139e6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: 'Alt-tekst (korte beschrijving)'
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: true
+            required: true
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 50e9f3d1-e0e1-4b38-9657-5cffff2d6fd8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d241f80e-80c7-4e5d-872c-4a01728d3737
+        userCondition: null
+fs: deparmentUploads
+handle: departmentImages
+name: Afdelingsiconen
+sortOrder: 1
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

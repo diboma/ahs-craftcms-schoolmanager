@@ -1,0 +1,121 @@
+#ddev-generated
+
+http:
+  routers:
+    
+    
+    school-manager-phpmyadmin-80-http:
+      
+      rule: HostRegexp(`school-manager.ddev.site`)
+      
+      service: "school-manager-phpmyadmin-80-http"
+      tls: false
+      entrypoints:
+        - http-8036
+    
+    
+    
+    school-manager-web-80-http:
+      
+      rule: HostRegexp(`school-manager.ddev.site`)
+      
+      service: "school-manager-web-80-http"
+      tls: false
+      entrypoints:
+        - http-80
+    
+    
+    school-manager-web-8025-http:
+      
+      rule: HostRegexp(`school-manager.ddev.site`)
+      
+      service: "school-manager-web-8025-http"
+      tls: false
+      entrypoints:
+        - http-9004
+    
+    
+    
+    
+    
+    school-manager-phpmyadmin-80-https:
+      
+      rule: HostRegexp(`school-manager.ddev.site`)
+      
+      service: "school-manager-phpmyadmin-80-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-8037
+    
+    
+    
+    
+    school-manager-web-80-https:
+      
+      rule: HostRegexp(`school-manager.ddev.site`)
+      
+      service: "school-manager-web-80-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-443
+    
+    
+    school-manager-web-8025-https:
+      
+      rule: HostRegexp(`school-manager.ddev.site`)
+      
+      service: "school-manager-web-8025-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-8026
+    
+    
+
+  services:
+    
+    school-manager-phpmyadmin-80-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-school-manager-phpmyadmin:80
+    
+    school-manager-phpmyadmin-80-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-school-manager-phpmyadmin:80
+    
+    school-manager-web-80-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-school-manager-web:80
+    
+    school-manager-web-8025-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-school-manager-web:8025
+    
+    school-manager-web-80-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-school-manager-web:80
+    
+    school-manager-web-8025-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-school-manager-web:8025
+    
+
+
+tls:
+  certificates:
+    - certFile: /mnt/ddev-global-cache/traefik/certs/school-manager.crt
+      keyFile: /mnt/ddev-global-cache/traefik/certs/school-manager.key
+

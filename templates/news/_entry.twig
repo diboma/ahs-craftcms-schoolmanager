@@ -1,0 +1,49 @@
+{# ================================================================ #}
+{# Props #}
+{# ================================================================ #}
+{% set content = entry.articleContent.all() %}
+
+{# ================================================================ #}
+{# Template #}
+{# ================================================================ #}
+{% extends "_layouts/base.twig" %}
+
+{% block main %}
+
+<main class="tw-container mt-6">
+
+  <header class="mb-4 p-2 bg-slate-100 rounded text-center">
+    <h1 class="mb-2">{{ entry.title }}</h1>
+    <h2 class="mb-2 font-medium">{{ entry.subtitle }}</h2>
+    <div class="font-medium text-slate-700">{{ entry.writer }}</div>
+    <div class="font-medium text-slate-700">{{ entry.postDate|date }}</div>
+  </header>
+
+  {% if content|length %}
+    <article class="mb-6">
+      {% for block in content %}
+        {% switch block.type %}        
+          {% case "body" %}
+            <div class="mb-4">
+              {{ block.text }}
+              {% if block.image and block.image.one is not null %}
+                <img src="{{ block.image.one.getUrl('w425') }}" alt="{{ block.image.one.title }}" 
+                     class="mt-4 mx-auto w-full max-w-[425px]" />
+              {% endif %}
+            </div>
+        
+          {% case "footer" %}
+            <div class="article-text">{{ block.text }}</div>
+
+          {% default %}       
+        
+        {% endswitch %}      
+      {% endfor %}
+      </article>
+  {% endif %}
+
+  {% include "_components/nav-back-to.twig" %}
+
+</main>  
+
+{% endblock %}

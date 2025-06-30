@@ -1,0 +1,46 @@
+columnSuffix: tmdrdsdt
+contentColumnType: string(6)
+fieldGroup: 5d5e94cf-56c3-43aa-a808-923f4c1d7840 # Banners
+handle: imagePosition
+instructions: null
+name: Afbeeldingspositie
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - top
+        -
+          - value
+          - top
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - center
+        -
+          - value
+          - center
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - bottom
+        -
+          - value
+          - bottom
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

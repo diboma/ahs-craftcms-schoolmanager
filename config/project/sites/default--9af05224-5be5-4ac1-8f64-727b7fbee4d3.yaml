@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: nl-BE
+name: MySchool
+primary: true
+siteGroup: a67de749-3fb8-4120-9368-5cb599f57b53 # MySchool
+sortOrder: 1

@@ -1,0 +1,59 @@
+css: ".ck.ck-content p.-heading {\r\n    margin-bottom: 0.5rem;\r\n    color: green;\r\n    font-size: 1.2rem;\r\n    font-weight: bold;\r\n}\r\n\r\n.ck.ck-content p.info-box {\r\n    padding: 1.2em 2em;\r\n    border: 1px solid #008080;\r\n    border-left: 10px solid #008080;\r\n    border-radius: 5px;\r\n    margin: 1.5em 0;\r\n}\r\n\r\n.ck.ck-content p.warning-box {\r\n    padding: 1.2em 2em;\r\n    border: 1px solid #e91e63;\r\n    border-left: 10px solid #e91e63;\r\n    border-radius: 5px;\r\n    margin: 1.5em 0;\r\n}"
+headingLevels:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+listPlugin: List
+name: Extended
+options:
+  fontSize:
+    options:
+      - tiny
+      - small
+      - big
+      - huge
+  style:
+    definitions:
+      -
+        classes:
+          - campus-heading
+        element: p
+        name: 'Campus heading'
+      -
+        classes:
+          - info-box
+        element: p
+        name: 'Info box'
+      -
+        classes:
+          - warning-box
+        element: p
+        name: 'Warning box'
+toolbar:
+  - style
+  - heading
+  - codeBlock
+  - '|'
+  - fontFamily
+  - fontSize
+  - fontColor
+  - fontBackgroundColor
+  - '|'
+  - bold
+  - italic
+  - underline
+  - '|'
+  - outdent
+  - indent
+  - bulletedList
+  - numberedList
+  - todoList
+  - '|'
+  - insertTable
+  - insertImage
+  - link
+  - '|'
+  - sourceEditing

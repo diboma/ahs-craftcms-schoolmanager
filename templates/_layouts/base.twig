@@ -1,0 +1,34 @@
+{# ================================================================ #}
+{# Props #}
+{# ================================================================ #}
+{% set path = craft.app.request.getSegment(1) %}
+
+{# ================================================================ #}
+{# Template #}
+{# ================================================================ #}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MySchool</title>
+
+  <link rel="shortcut icon" href="{{url('/images/favicon.png')}}" type="image/x-icon">
+
+  {% do craft.app.view.registerCssFile('@web/css/tailwind.css') %}
+</head>
+
+<body class="bg-slate-50 min-h-[100dvh] flex flex-col text-slate-800">
+
+  {% include "_partials/header.twig" %}
+
+  {% block main %}
+  {% endblock %}
+
+  {% include "_partials/footer.twig" %}
+  
+  {% do craft.app.view.registerJsFile('@web/js/app.js') %}
+
+</body>
+</html>

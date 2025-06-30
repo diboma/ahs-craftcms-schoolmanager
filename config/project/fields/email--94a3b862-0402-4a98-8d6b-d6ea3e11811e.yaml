@@ -1,0 +1,12 @@
+columnSuffix: mlqlqaau
+contentColumnType: string
+fieldGroup: 67a1a2c1-b49f-4ef2-81ba-2e3e028f89be # Gebruikers
+handle: email
+instructions: null
+name: E-mailadres
+searchable: false
+settings:
+  placeholder: E-mailadres
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email

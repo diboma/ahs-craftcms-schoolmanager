@@ -1,0 +1,17 @@
+columnSuffix: vxfnrwsa
+contentColumnType: datetime
+fieldGroup: 1349ef6d-2683-4de4-8756-f2eebe8fbc19 # Cursussen
+handle: endDate
+instructions: null
+name: Einddatum
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: 30
+  showDate: true
+  showTime: false
+  showTimeZone: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

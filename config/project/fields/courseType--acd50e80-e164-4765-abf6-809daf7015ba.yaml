@@ -1,0 +1,35 @@
+columnSuffix: xowmjnsb
+contentColumnType: string(16)
+fieldGroup: 1349ef6d-2683-4de4-8756-f2eebe8fbc19 # Cursussen
+handle: courseType
+instructions: null
+name: Onderwijsvorm
+searchable: true
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Contactonderwijs
+        -
+          - value
+          - contactonderwijs
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Afstandsleren
+        -
+          - value
+          - afstandsleren
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 45bc7d1a-0280-4ede-a6ce-ebf2f0d00f45 # Inschrijvingen
+handle: course
+instructions: null
+name: Cursus
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 1
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'Voeg een cursus toe'
+  showSiteMenu: true
+  sources:
+    - 'section:129b299f-f5b5-4b03-815e-0f1e0c780b9a' # Cursussen
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

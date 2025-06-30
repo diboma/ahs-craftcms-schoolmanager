@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 338cbe38-440e-4971-9e00-b4f5125bc5a7 # Afdelingen
+handle: department
+instructions: null
+name: Afdeling
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: 1
+  localizeRelations: false
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Voeg een afdeling toe (maximum 1)'
+  showSiteMenu: true
+  source: 'group:eb476954-0476-4d28-bc57-2d083995e44c' # Afdelingen
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

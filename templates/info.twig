@@ -1,0 +1,38 @@
+{% extends "_layouts/base.twig" %}
+
+{% block main %}
+
+  <main class="mt-6 tw-container md:flex md:gap-6">
+
+    {# Navbar #}
+    {% include "_components/nav-info.twig" %}     
+
+    <section>
+
+      {# Title #}
+      <h1>{{ entry.title }}</h1>
+
+      {# Breadcrumbs #}
+      {# {% include "_components/breadcrumbs.twig" %} #}
+
+      {# Content #}
+      <article class="flex flex-col gap-2 editor mb-4">
+        {{ entry.pageCopy }}
+      </article>
+
+      {# Children #}
+      {% if entry.children|length %}
+        <nav class="bg-slate-100 rounded my-4 p-2">
+          <ul>
+            {% for child in entry.children %}
+              <li><a href="{{ child.url }}" class="underline text-teal-700">{{ child.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      {% endif %}
+    
+    </section>
+
+  </main>
+
+{% endblock %}

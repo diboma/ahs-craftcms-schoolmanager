@@ -1,0 +1,82 @@
+fieldLayouts:
+  d0e95918-1da3-4e00-a749-2246460b66d0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Naam
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 1e4f6b08-d2b4-439c-8fc6-4d768207018c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: de9d6891-6c3d-4ea8-b82d-0ddcde7b5696 # Tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c74fafb2-ce49-4189-8543-2026b3678fa9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: efa1ffb4-d574-4b17-a07e-e5bb2248fdb8 # Ondertitel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b2329cd7-db9d-4b9d-a8a3-00ad58cd7928
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b474c56e-2968-49cf-8001-fc769bd22de6 # Kleur
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 74311f43-a57d-4d5e-985a-292f781067cd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dea5a0ff-a022-4965-89d9-72186a154d0e
+        userCondition: null
+handle: bannerText
+hasTitleField: true
+name: Bannertekst
+section: 740fd096-6ab0-4664-9f57-35e961664c7e # Bannerteksten
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

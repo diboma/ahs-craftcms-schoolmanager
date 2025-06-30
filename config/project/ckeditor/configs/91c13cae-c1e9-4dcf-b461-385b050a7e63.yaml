@@ -1,0 +1,18 @@
+headingLevels:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+listPlugin: List
+name: Simple
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - underline
+  - italic
+  - bulletedList
+  - numberedList
+  - link

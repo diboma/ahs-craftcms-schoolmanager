@@ -1,0 +1,111 @@
+field: f3797235-3342-4713-ab42-6c67225eddf4 # Artikelinhoud
+fieldLayouts:
+  b12002bc-d28a-4186-934a-069fc858e222:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 598a4ebe-cf06-49f6-979c-41206caba197 # Tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 41c2af86-7f34-4400-8b06-37765ec0f1c3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: deaef613-40d8-43b8-b986-38b95f9f12ab # Afbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fdcbd49c-402e-42b7-8c73-faba6e689e48
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 7a7aea38-f32e-4a0f-af48-7cd2920640a9
+        userCondition: null
+fields:
+  598a4ebe-cf06-49f6-979c-41206caba197: # Tekst
+    columnSuffix: dffylmsp
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Tekst
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      ckeConfig: 91c13cae-c1e9-4dcf-b461-385b050a7e63 # Simple
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  deaef613-40d8-43b8-b986-38b95f9f12ab: # Afbeelding
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Afbeelding
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:e2fd231c-1435-429e-90ac-242c0a5e0a44' # Nieuwsafbeeldingen
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:359aa862-f1c1-460b-9daf-fc91c3bb49cc' # Afdelingsiconen
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: body
+name: Inhoud
+sortOrder: 1

@@ -1,0 +1,48 @@
+{# ================================================================ #}
+{# Props #}
+{# ================================================================ #}
+{% set path = craft.app.request.getSegment(1) %}
+
+{% if path == 'cursussen' %}
+  {% set urlCourses = url('cursussen') %}
+  {% if filterId is not null %}
+    {% set urlCoursesFiltered = url('cursussen?fid=' ~ filterId) %}
+  {% endif %}
+{% endif %}
+
+{% if path == 'nieuws' %}
+  {% set urlNews = url('nieuws') %}
+{% endif %}
+
+
+{% set icon = '
+   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-1" fill="none" viewBox="0 0 24 24" 
+        stroke-width="1.5" stroke="rgb(6, 182, 212)" >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5" />
+   </svg>' %}
+
+{# ================================================================ #}
+{# Template #}
+{# ================================================================ #}
+<nav class="mb-6 py-2 bg-slate-100 text-cyan-500 flex flex-col sm:flex-row justify-center items-center gap-2" 
+     role="navigation" aria-label="Terug naar pagina met cursussen">
+     {% if path == 'cursussen' %}
+      <a href="{{ urlCourses }}" class="flex gap-1 items-center text-cyan-500 hover:opacity-70 text-center">
+        <div class="w-5 h-5 mt-1">{{ svg(icon) }}</div>
+        Alle cursussen
+      </a>
+      <p class="hidden sm:flex">|</p>
+      <a href="{{ urlCoursesFiltered }}" class="flex gap-1 items-center hover:opacity-70 text-center">
+        <div class="w-5 h-5 mt-1">{{ svg(icon) }}</div>
+        Cursussen {{ department.title }}
+      </a>     
+     {% endif %}
+
+     {% if path == 'nieuws' %}
+      <a href="{{ urlNews }}" class="flex gap-1 items-center hover:opacity-70 text-center">
+        <div class="w-5 h-5 mt-1">{{ svg(icon) }}</div>
+        Nieuws
+      </a>
+     {% endif %}
+     
+</nav>

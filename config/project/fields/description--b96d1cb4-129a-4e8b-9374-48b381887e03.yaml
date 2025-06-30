@@ -1,0 +1,24 @@
+columnSuffix: cmbsxyhc
+contentColumnType: text
+fieldGroup: dd42cf6b-e419-4f02-8749-501bd50e3efd # Common
+handle: description
+instructions: null
+name: Beschrijving
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes:
+    - 1a091ca9-8a55-4f30-a303-93b4d51b46c3 # Cursusafbeeldingen
+  ckeConfig: e9ae2235-825e-4151-8713-50deaa0cadf5 # Extended
+  columnType: text
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: true
+  wordLimit: 250
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

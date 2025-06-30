@@ -1,0 +1,43 @@
+fieldLayouts:
+  f2f052d8-0b5d-4afb-9f99-2b4acc2f6bc8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: adb89c2c-271a-412c-a76f-d3483773d358
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f502412c-ce1c-4e51-b171-1c6ce8fe6ae4
+        userCondition: null
+fs: uploadsVaria
+handle: varia
+name: Varia
+sortOrder: 7
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

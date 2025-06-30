@@ -1,0 +1,82 @@
+fieldLayouts:
+  d550494b-2654-48d0-8fc5-061bf3477150:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Naam
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: fdf944d5-990e-457f-b0ca-65a0ec995467
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 803e3d99-4ae6-48a4-aa26-4c46b791bf90 # Bannerafbeelding
+            instructions: 'Voorzie een afbeelding met de minimum afmetingen van 1920x1080'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d63a9b35-eeb1-457c-b2ee-418ea7c04cd3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 72d01d76-d01f-49dd-8816-217d474557a6 # Afbeeldingspositie
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7b61c59c-01f0-4fc8-bb80-3f4aa5a4b2dc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d7ab0399-4f29-47db-a568-9077304d5a71 # Credits
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4143a87f-409b-4a5b-a837-d75e04034bf9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5ae8da70-2865-429b-ab9a-ea76fc12007e
+        userCondition: null
+handle: bannerImage
+hasTitleField: true
+name: Bannerafeelding
+section: fd582b1f-02c0-4534-8615-5b6587d147a0 # Bannerafbeeldingen
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

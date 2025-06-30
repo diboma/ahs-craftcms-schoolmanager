@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6e9d9f61-2783-4811-9453-6b8463e10253 # Nieuws
+handle: articleContent
+instructions: null
+name: Artikelinhoud
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_articlecontent}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

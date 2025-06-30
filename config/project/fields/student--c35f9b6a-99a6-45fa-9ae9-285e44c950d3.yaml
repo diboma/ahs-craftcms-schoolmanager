@@ -1,0 +1,55 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 45bc7d1a-0280-4ede-a6ce-ebf2f0d00f45 # Inschrijvingen
+handle: student
+instructions: null
+name: Student
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 1
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\fields\conditions\RelationalFieldConditionRule
+              -
+                - uid
+                - c82bf693-52bd-440b-94e6-107d271c0125
+              -
+                - operator
+                - relatedTo
+              -
+                - elementId
+                - '58'
+              -
+                - fieldUid
+                - 35321f2d-97c5-43cc-a7a3-482d2bc42fc3 # Rol
+  selectionLabel: 'Voeg een student toe'
+  showSiteMenu: true
+  sources:
+    - 'section:69582cc7-d647-4240-a3e9-d9557b1d62d1' # Gebruikers
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

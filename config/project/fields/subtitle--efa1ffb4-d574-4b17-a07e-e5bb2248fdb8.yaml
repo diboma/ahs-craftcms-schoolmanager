@@ -1,0 +1,19 @@
+columnSuffix: gialnygd
+contentColumnType: text
+fieldGroup: dd42cf6b-e419-4f02-8749-501bd50e3efd # Common
+handle: subtitle
+instructions: null
+name: Ondertitel
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

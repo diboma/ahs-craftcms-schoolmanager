@@ -1,0 +1,29 @@
+{# ================================================================ #}
+{# Props #}
+{# ================================================================ #}
+{% set entries = craft.entries().section('info').all() %}
+{% set segments = craft.app.request.getSegments() %}
+
+{# ================================================================ #}
+{# Template #}
+{# ================================================================ #}
+{% if entries|length > 0 %}
+  <nav class="bg-slate-100 p-2 rounded mb-6 md:min-w-fit">
+    <ul class="list-info">
+      {% nav entry in entries %}
+        <li>
+          <a href="{{ entry.url }}" 
+            class="text-teal-700 {% if entry.slug == segments|last %}font-bold{% endif %}">
+            {{ entry.title }}
+          </a>
+          {% ifchildren %}
+            <ul class="list-info">
+              {% children %}
+            </ul>
+          {% endifchildren %}
+        </li>
+      {% endnav %}
+    </ul>
+  </nav>
+{% endif %}
+

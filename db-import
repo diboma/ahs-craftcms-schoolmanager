@@ -1,0 +1,10 @@
+#! /bin/bash
+
+# BASH COMMAND TO RUN THIS SCRIPT:
+# cd to the folder where this script is and run:
+#
+#   bash <filename>
+
+
+# ddev export-db --gzip=true --file ~/Desktop/db.sql.gz
+ddev import-db --file=./resources/db.sql

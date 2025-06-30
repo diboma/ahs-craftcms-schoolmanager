@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: courses
+name: Cursussen
+propagationMethod: all
+siteSettings:
+  9af05224-5be5-4ac1-8f64-727b7fbee4d3: # MySchool
+    enabledByDefault: true
+    hasUrls: true
+    template: courses/_entry
+    uriFormat: 'cursussen/{slug}'
+type: channel

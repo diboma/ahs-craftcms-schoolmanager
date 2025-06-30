@@ -1,0 +1,24 @@
+{% if pageInfo.totalPages > 1 %}
+
+  <nav class="my-4 p-2 bg-slate-100 rounded flex justify-center items-center gap-2" 
+      role="navigation" aria-label="Paginering van zoekresultaten">
+    {% if pageInfo.getPrevUrl() %}
+      <a href="{{ pageInfo.getPrevUrl() }}" class="hover:opacity-70">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" 
+            stroke-width="1.5" stroke="rgb(6, 182, 212)">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5" />
+        </svg>
+      </a>
+    {% endif %}
+    <p class="btn btn-secondary py-1">{{ pageInfo.currentPage }}<span class="text-sm">/{{ pageInfo.totalPages }}</span></p>
+    {% if pageInfo.getNextUrl() %}
+      <a href="{{ pageInfo.getNextUrl() }}" class="hover:opacity-70">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" 
+            stroke-width="1.5" stroke="rgb(6, 182, 212)">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+        </svg>
+      </a>
+    {% endif %}
+  </nav>
+
+{% endif %}

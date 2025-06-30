@@ -1,0 +1,17 @@
+currLabel: 'Form Submissions'
+customIcon: null
+enabled: true
+handle: contact-form-extensions
+icon: /var/www/html/vendor/hybridinteractive/craft-contact-form-extensions/src/icon-mask.svg
+layout: d301ea2b-5acc-4192-b929-03844bc8cb9c # Default
+level: 1
+newWindow: false
+parent: null
+prevLabel: 'Form Submissions'
+prevLevel: 1
+prevParent: null
+prevUrl: contact-form-extensions
+sortOrder: 5
+subnavBehaviour: null
+type: plugin
+url: contact-form-extensions

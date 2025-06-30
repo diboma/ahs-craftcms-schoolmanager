@@ -1,0 +1,66 @@
+fieldLayouts:
+  ddb69aa5-9124-492b-b1db-e5c1da087fdf:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Naam
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: dafab438-18cc-43ef-9b0e-44fee95a5c49
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: 'Alt-tekst (korte beschrijving)'
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: true
+            required: true
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: c66b91b2-1c28-41fc-aff7-dd3e6085c369
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dd930aca-103c-4fdb-a5a3-898d2bedd16d
+        userCondition: null
+fs: courseUploads
+handle: courseImages
+name: Cursusafbeeldingen
+sortOrder: 3
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

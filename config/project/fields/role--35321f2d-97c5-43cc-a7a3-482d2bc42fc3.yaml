@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 67a1a2c1-b49f-4ef2-81ba-2e3e028f89be # Gebruikers
+handle: role
+instructions: null
+name: Rol
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: 3
+  localizeRelations: false
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Selecteer de rollen (meerdere mogelijk, maximum 3)'
+  showSiteMenu: true
+  source: 'group:05fcd9dd-ae66-430d-a56b-57970fa6e72e' # Rollen
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

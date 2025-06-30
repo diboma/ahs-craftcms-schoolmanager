@@ -1,0 +1,55 @@
+{# ================================================================ #}
+{# Props #}
+{# ================================================================ #}
+{% set queryParams = {
+  section: 'news',
+  orderBy: 'id desc',
+  limit: 12,
+} %}
+
+{% set articleQuery = craft.entries(queryParams) %}
+{% paginate articleQuery as pageInfo, articles %}
+
+{# ================================================================ #}
+{# Template #}
+{# ================================================================ #}
+{% extends "_layouts/base.twig" %}
+
+{% block main %}
+
+<main class="tw-container mt-6">
+
+  <h1 class="mb-6 text-center">Nieuws</h1>
+
+  {# List of articles #}
+  {% if not articles or articles|length == 0 %}
+    {% include "_components/alert.twig" with { 
+      type: 'info', message: 'Sorry, geen nieuwsartikelen gevonden :-('
+    } %}
+  {% else %}
+    <ul class="mb-6 flex flex-row flex-wrap justify-center gap-6">
+      {% for article in articles %}
+        {% set content = craft.matrixBlocks({owner: article, type: 'body'}).one() %}
+        <li class="w-[15rem] card">
+          <a href="{{ article.url }}" class="inline-flex flex-col h-full">
+            {% if content.image.one %}
+              <img src="{{ content.image.one.getUrl('w240') }}" alt="{{ content.image.one.title }}" class="w-full aspect-video object-cover object-center">
+            {% endif %}    
+            <div class="p-2 h-full flex flex-col justify-between gap-2">
+              <div class="font-semibold text-teal-700">{{ article.title }}</div>
+              <div class="ml-auto text-sm">
+                {{ article.postDate|date }}
+              </div>
+            </div>         
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {# Navigation #}
+    {% include "_components/pagination.twig" %}
+  {% endif %}
+
+</main>
+
+{% endblock %}

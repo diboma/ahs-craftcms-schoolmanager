@@ -1,0 +1,55 @@
+{# ================================================================ #}
+{# Props #}
+{# ================================================================ #}
+{% set image = category.departmentImage.one() %}
+
+{% set courseParams =   {
+    section: 'courses',
+    department: category.id,
+    orderBy: 'title asc',
+  }
+%}
+{% set courses = craft.entries(courseParams).all() %}
+
+{# ================================================================ #}
+{# Template #}
+{# ================================================================ #}
+{% extends "_layouts/base.twig" %}
+
+{% block main %}
+
+  <main class="mt-6 tw-container">
+
+    {# Department info #}
+    <header class="mb-6 p-2 bg-slate-100 flex justify-between items-center gap-4 rounded">
+      <h1>{{ category.title }}</h1>
+      <img src="{{image.getUrl('w128')}}" alt="{{image.title}}" 
+           class="w-32">
+    </header>
+
+    {# Course list #}
+    {% if courses is null or courses|length == 0 %}
+      {% include "_components/alert.twig" with { 
+        type: 'info', message: 'Sorry, geen cursussen gevonden :-('
+      } %}
+    {% else %}
+      {% for course in courses %}
+        {% set courseImage = course.courseImage.one() %}
+        <article class="mt-6 mb-8 pb-4 border-b-2 border-slate-200">
+          <h2 class="mb-4">{{course.title}}</h2>
+          <div class="flex flex-col gap-4 xs:flex-row xs:items-center xs:gap-8">
+            <img src="{{courseImage.getUrl('w128')}}" alt="{{courseImage.title}}" 
+                 class="w-32" {% if loop.index > 3  %}loading="lazy"{% endif %}
+                 >
+            <div>
+              <p>{{course.description|striptags|truncate(100)}}</p> 
+              <a href="{{course.url}}" class="mt-2 btn btn-secondary">Bekijk cursus</a>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    {% endif %}
+    
+  </main>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+fieldLayouts:
+  37c68a41-651d-4356-ba60-2cea6caf736e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Naam
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 84fba66e-c582-40ba-9ef5-d4ccf67c0e4e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: 'Alt-tekst (korte beschrijving)'
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: true
+            required: true
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 6c52c72e-acf0-4825-b6d8-82d8c5a6b55c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 51bada19-4b0c-42da-8ceb-6a64d3556c50
+        userCondition: null
+fs: userUploads
+handle: avatars
+name: Avatars
+sortOrder: 2
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

@@ -1,0 +1,402 @@
+dateModified: 1699264506
+elementSources:
+  craft\elements\Category:
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'group:eb476954-0476-4d28-bc57-2d083995e44c' # Afdelingen
+      tableAttributes:
+        - id
+        - 'field:36ea4729-9f62-45f6-8f07-c3631979cd74' # Afdelingsafbeelding
+        - link
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'group:05fcd9dd-ae66-430d-a56b-57970fa6e72e' # Rollen
+      tableAttributes:
+        - id
+      type: native
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - id
+        - section
+        - type
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: singles
+      tableAttributes:
+        - link
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'section:129b299f-f5b5-4b03-815e-0f1e0c780b9a' # Cursussen
+      tableAttributes:
+        - id
+        - 'field:432711b1-36db-4344-95b0-8006bc66058a' # Afdeling
+        - 'field:53983661-ec4c-4d0e-858d-15a3219382b6' # Leerkracht
+        - 'field:acd50e80-e164-4765-abf6-809daf7015ba' # Onderwijsvorm
+        - 'field:ee7276bb-3c8e-4c50-8a1a-907e917fa638' # Startdatum
+        - 'field:5404f384-4ef7-44f8-a47d-2e062b9a11fe' # Einddatum
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:69582cc7-d647-4240-a3e9-d9557b1d62d1' # Gebruikers
+      tableAttributes:
+        - id
+        - 'field:4ed5ab05-29bd-4679-8cc2-be6ff9740eb8' # Avatar
+        - 'field:94a3b862-0402-4a98-8d6b-d6ea3e11811e' # E-mailadres
+        - 'field:35321f2d-97c5-43cc-a7a3-482d2bc42fc3' # Rol
+        - postDate
+        - expiryDate
+      type: native
+    -
+      heading: ''
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:740fd096-6ab0-4664-9f57-35e961664c7e' # Bannerteksten
+      tableAttributes:
+        - id
+        - type
+        - 'field:b474c56e-2968-49cf-8001-fc769bd22de6' # Kleur
+        - 'field:de9d6891-6c3d-4ea8-b82d-0ddcde7b5696' # Tekst
+        - 'field:efa1ffb4-d574-4b17-a07e-e5bb2248fdb8' # Ondertitel
+        - postDate
+        - expiryDate
+      type: native
+    -
+      heading: ''
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:69e90884-4916-462f-b793-fc4c7f447f3a' # Nieuws
+      tableAttributes:
+        - 'field:efa1ffb4-d574-4b17-a07e-e5bb2248fdb8' # Ondertitel
+        - 'field:a2eafd56-9d04-4652-a39a-818b035b1dc0' # Auteur
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      heading: ''
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:fd582b1f-02c0-4534-8615-5b6587d147a0' # Bannerafbeeldingen
+      tableAttributes:
+        - id
+        - 'field:803e3d99-4ae6-48a4-aa26-4c46b791bf90' # Bannerafbeelding
+        - 'field:72d01d76-d01f-49dd-8816-217d474557a6' # Afbeeldingspositie
+        - 'field:d7ab0399-4f29-47db-a568-9077304d5a71' # Credits
+        - postDate
+        - expiryDate
+      type: native
+    -
+      heading: ''
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:6dd71438-05db-4abe-a944-f4585b81c793' # Info
+      tableAttributes:
+        - id
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      heading: ''
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:255e9385-140e-4aab-b7b5-f498f6b1ef0d' # Inschrijvingen
+      tableAttributes:
+        - id
+        - 'field:c35f9b6a-99a6-45fa-9ae9-285e44c950d3' # Student
+        - 'field:c4761e9b-b01c-44b9-883a-dd09fe65860d' # Cursus
+        - postDate
+        - expiryDate
+      type: native
+email:
+  fromEmail: info@myschool.be
+  fromName: MySchool
+  replyToEmail: null
+  template: null
+  transportSettings:
+    host: $MAILHOG_SMTP_HOSTNAME
+    password: ''
+    port: $MAILHOG_SMTP_PORT
+    useAuthentication: '0'
+    username: ''
+  transportType: craft\mail\transportadapters\Smtp
+fs:
+  bannerUploads:
+    hasUrls: true
+    name: 'Uploads voor banners'
+    settings:
+      path: '@webroot/uploads/banners'
+    type: craft\fs\Local
+    url: '@web/uploads/banners'
+  campusUploads:
+    hasUrls: true
+    name: 'Uploads voor campussen'
+    settings:
+      path: '@webroot/uploads/campus'
+    type: craft\fs\Local
+    url: '@web/uploads/campus'
+  courseUploads:
+    hasUrls: true
+    name: 'Uploads voor cursussen'
+    settings:
+      path: '@webroot/uploads/courses'
+    type: craft\fs\Local
+    url: '@web/uploads/courses'
+  deparmentUploads:
+    hasUrls: true
+    name: 'Uploads voor afdelingen'
+    settings:
+      path: '@webroot/uploads/departments'
+    type: craft\fs\Local
+    url: '@web/uploads/departments'
+  uploadsVaria:
+    hasUrls: true
+    name: 'Uploads varia'
+    settings:
+      path: '@webroot/uploads/varia'
+    type: craft\fs\Local
+    url: '@web/uploads/varia'
+  uploadsVoorNieuws:
+    hasUrls: true
+    name: 'Uploads voor nieuws'
+    settings:
+      path: '@webroot/uploads/news'
+    type: craft\fs\Local
+    url: '@web/uploads/news'
+  userUploads:
+    hasUrls: true
+    name: 'Uploads voor gebruikers'
+    settings:
+      path: '@webroot/uploads/users'
+    type: craft\fs\Local
+    url: '@web/uploads/users'
+meta:
+  __names__:
+    0ffcdb23-62ef-4190-a3eb-8c6218643156: 'Nieuws overzichtspagina' # Nieuws overzichtspagina
+    1a091ca9-8a55-4f30-a303-93b4d51b46c3: Cursusafbeeldingen # Cursusafbeeldingen
+    2bc02c45-cd9e-4d3b-9498-3fd9700851fa: Campusafbeeldingen # Campusafbeeldingen
+    3cb5b4a9-311b-4d92-83bf-6dc2c3f07d71: Tekst # Tekst
+    4dad07af-b104-4669-a718-3d3c848fd877: 'Afdelingen overzichtspagina' # Afdelingen overzichtspagina
+    4e38d463-24b7-46a5-820c-32c9afde1f4b: Banner # Banner
+    4ed5ab05-29bd-4679-8cc2-be6ff9740eb8: Avatar # Avatar
+    5d5e94cf-56c3-43aa-a808-923f4c1d7840: Banners # Banners
+    05fcd9dd-ae66-430d-a56b-57970fa6e72e: Rollen # Rollen
+    06b8480d-3069-4a9f-a462-4ec7d12948de: 'Afdelingen overzichtspagina' # Afdelingen overzichtspagina
+    6dd71438-05db-4abe-a944-f4585b81c793: Info # Info
+    6e9d9f61-2783-4811-9453-6b8463e10253: Nieuws # Nieuws
+    07b47402-4909-40ce-bc6d-d4da419a714a: 'Thumbnail Width 128' # Thumbnail Width 128
+    9af05224-5be5-4ac1-8f64-727b7fbee4d3: MySchool # MySchool
+    015e99c0-7464-4e6a-bf45-bf6e9ae205be: Inhoud # Inhoud
+    26cfdff2-2773-4001-abef-4d3d64d51237: Gebruiker # Gebruiker
+    36ea4729-9f62-45f6-8f07-c3631979cd74: Afdelingsafbeelding # Afdelingsafbeelding
+    45bc7d1a-0280-4ede-a6ce-ebf2f0d00f45: Inschrijvingen # Inschrijvingen
+    67a1a2c1-b49f-4ef2-81ba-2e3e028f89be: Gebruikers # Gebruikers
+    69e90884-4916-462f-b793-fc4c7f447f3a: Nieuws # Nieuws
+    72d01d76-d01f-49dd-8816-217d474557a6: Afbeeldingspositie # Afbeeldingspositie
+    91c13cae-c1e9-4dcf-b461-385b050a7e63: Simple # Simple
+    94a3b862-0402-4a98-8d6b-d6ea3e11811e: E-mailadres # E-mailadres
+    103b0f04-038b-4817-b524-f19709ddcf2f: Cursusafbeelding # Cursusafbeelding
+    121eaf3e-bb9a-4663-ad67-e2cd5ef20e76: Article # Article
+    129b299f-f5b5-4b03-815e-0f1e0c780b9a: Cursussen # Cursussen
+    255e9385-140e-4aab-b7b5-f498f6b1ef0d: Inschrijvingen # Inschrijvingen
+    338cbe38-440e-4971-9e00-b4f5125bc5a7: Afdelingen # Afdelingen
+    359aa862-f1c1-460b-9daf-fc91c3bb49cc: Afdelingsiconen # Afdelingsiconen
+    598a4ebe-cf06-49f6-979c-41206caba197: Tekst # Tekst
+    740fd096-6ab0-4664-9f57-35e961664c7e: Bannerteksten # Bannerteksten
+    803e3d99-4ae6-48a4-aa26-4c46b791bf90: Bannerafbeelding # Bannerafbeelding
+    1349ef6d-2683-4de4-8756-f2eebe8fbc19: Cursussen # Cursussen
+    5404f384-4ef7-44f8-a47d-2e062b9a11fe: Einddatum # Einddatum
+    35321f2d-97c5-43cc-a7a3-482d2bc42fc3: Rol # Rol
+    43400f54-46f2-4e9e-b870-c5280df110f7: 'Thumbnail Width 240' # Thumbnail Width 240
+    69582cc7-d647-4240-a3e9-d9557b1d62d1: Gebruikers # Gebruikers
+    94348a5b-02b6-48c5-9e11-6436766c6865: Contactformulier # Contactformulier
+    432711b1-36db-4344-95b0-8006bc66058a: Afdeling # Afdeling
+    41103057-8b97-49b6-956e-f45a45e7c6c7: Inschrijving # Inschrijving
+    53983661-ec4c-4d0e-858d-15a3219382b6: Leerkracht # Leerkracht
+    a2eafd56-9d04-4652-a39a-818b035b1dc0: Auteur # Auteur
+    a67de749-3fb8-4120-9368-5cb599f57b53: MySchool # MySchool
+    ab38fa10-5629-4f6d-8c04-8104b738f181: Bannerafbeeldingen # Bannerafbeeldingen
+    ac9912a0-4686-4f7a-8daf-1b31f5b9e60c: 'Thumbnail Width 80' # Thumbnail Width 80
+    acd50e80-e164-4765-abf6-809daf7015ba: Onderwijsvorm # Onderwijsvorm
+    ad5d57df-6a87-460c-8aa5-ee4164b67f5a: Contactformulier # Contactformulier
+    afdec4d5-8bac-4226-9ea7-f1cc8c8b3f01: Avatars # Avatars
+    b96d1cb4-129a-4e8b-9374-48b381887e03: Beschrijving # Beschrijving
+    b474c56e-2968-49cf-8001-fc769bd22de6: Kleur # Kleur
+    b3809512-e587-4e2f-9daf-773952e90d41: Default # Default
+    bc944c6f-2330-464a-a706-e63967dbaa97: 'Cursussen overzichtspagina' # Cursussen overzichtspagina
+    c35f9b6a-99a6-45fa-9ae9-285e44c950d3: Student # Student
+    c4761e9b-b01c-44b9-883a-dd09fe65860d: Cursus # Cursus
+    c6258de4-85b4-4687-b8f8-c38916fc2b27: Bannertekst # Bannertekst
+    cd65003a-6adc-46eb-95ce-d12001377642: Footer # Footer
+    d6ef124b-f18e-4a0e-8d67-4d9df0d7cb86: 'Cursussen overzichtspagina' # Cursussen overzichtspagina
+    d7ab0399-4f29-47db-a568-9077304d5a71: Credits # Credits
+    d301ea2b-5acc-4192-b929-03844bc8cb9c: Default # Default
+    d48395a1-d94c-440a-aa7f-f27ace6d523f: Bannerafeelding # Bannerafeelding
+    dd42cf6b-e419-4f02-8749-501bd50e3efd: Common # Common
+    de9d6891-6c3d-4ea8-b82d-0ddcde7b5696: Tekst # Tekst
+    deaef613-40d8-43b8-b986-38b95f9f12ab: Afbeelding # Afbeelding
+    e2fd231c-1435-429e-90ac-242c0a5e0a44: Nieuwsafbeeldingen # Nieuwsafbeeldingen
+    e9ae2235-825e-4151-8713-50deaa0cadf5: Extended # Extended
+    e21832a4-9d04-4fca-8a97-b7566ce0aace: Varia # Varia
+    eb476954-0476-4d28-bc57-2d083995e44c: Afdelingen # Afdelingen
+    ebfa312f-d1d0-4848-97ce-58b8e29646d7: 'News Image w425' # News Image w425
+    ee7276bb-3c8e-4c50-8a1a-907e917fa638: Startdatum # Startdatum
+    efa1ffb4-d574-4b17-a07e-e5bb2248fdb8: Ondertitel # Ondertitel
+    f5b5bdc9-ede0-4e03-8c26-2df46ce5b397: Inhoud # Inhoud
+    f30d40fa-3e25-4617-8ca5-392b812a2428: Cursus # Cursus
+    f3797235-3342-4713-ab42-6c67225eddf4: Artikelinhoud # Artikelinhoud
+    fd582b1f-02c0-4534-8615-5b6587d147a0: Bannerafbeeldingen # Bannerafbeeldingen
+    fe056d46-d7d1-49fe-a2a4-60f6a2ccf2fd: 'Nieuws overzichtspagina' # Nieuws overzichtspagina
+plugins:
+  admin-bar:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.0
+    settings:
+      customCss: ''
+      customLinks:
+        -
+          __assoc__:
+            -
+              - linkLabel
+              - ''
+            -
+              - linkUrl
+              - ''
+            -
+              - adminOnly
+              - ''
+      displayDashboardLink: true
+      displayDefaultEditSection: true
+      displayEditAuthor: true
+      displayEditDate: true
+      displayGreeting: true
+      displayGuideLink: true
+      displayLogout: true
+      displayRevisionNote: true
+      displaySettingsLink: true
+      enableMobileMenu: true
+  breadcrumb:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.1.1
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      allowedMessageFields: null
+      prependSender: 'Verzonden door'
+      prependSubject: 'Nieuw bericht van MySchool'
+      successFlashMessage: 'Jouw bericht werd verzonden!'
+      toEmail: dirk.bouckaert@student.arteveldehs.be
+  contact-form-extensions:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+    settings:
+      confirmationSubject: 'Bedankt voor je bericht'
+      confirmationTemplate: contact/confirmation.twig
+      enableConfirmationEmail: '1'
+      enableDatabase: '1'
+      enableRecaptchaOverride: ''
+      enableTemplateOverwrite: ''
+      notificationTemplate: ''
+      recaptcha: ''
+      recaptchaDataBadge: bottomright
+      recaptchaDebug: ''
+      recaptchaHideBadge: ''
+      recaptchaSecretKey: ''
+      recaptchaSiteKey: ''
+      recaptchaThreshold: '0.5'
+      recaptchaTimeout: '5'
+      recaptchaUrl: ''
+      recaptchaVerificationUrl: ''
+      recaptchaVersion: ''
+  cp-nav:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.11
+  lorem-ipsum:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  quick-field:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+system:
+  edition: solo
+  live: true
+  name: MySchool
+  retryDuration: null
+  schemaVersion: 4.5.3.0
+  timeZone: Europe/Brussels
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: afdec4d5-8bac-4226-9ea7-f1cc8c8b3f01 # Avatars
+  requireEmailVerification: true

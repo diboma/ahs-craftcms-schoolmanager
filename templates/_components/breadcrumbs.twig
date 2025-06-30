@@ -1,0 +1,30 @@
+{# {% if entry.getAncestors()|length > 0 %}
+  <div class="my-4 p-2 bg-slate-100 text-sm rounded">
+    <a href="{{siteUrl}}" class="hover:text-cyan-500">{{siteName}}</a> &gt;
+    {% for page in entry.getAncestors() %}
+      <span class="hover:text-cyan-500">{{page.getLink() }}</span> &gt;
+      {{entry.title}}
+    {% endfor %}
+  </div>
+{% endif %} #}
+
+{% set breadcrumb = craft.breadcrumb.config %}
+
+{% if breadcrumb %}
+  <ol class="my-4 p-2 bg-slate-100 text-sm rounded flex">
+      {% for crumb in breadcrumb  %}
+          {% if loop.last %}
+          <li class="">
+              <span>{{ crumb.title }}</span>
+          </li>
+          {% else %}
+          <li class="">
+              <a class="hover:text-cyan-500" href="{{ crumb.url }}">
+                  <span>{{ crumb.title }}</span>
+              </a>
+              &gt;&nbsp; 
+          </li>
+          {% endif %}
+      {% endfor %}
+  </ol>
+{% endif %}

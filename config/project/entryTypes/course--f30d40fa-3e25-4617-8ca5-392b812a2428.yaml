@@ -1,0 +1,130 @@
+fieldLayouts:
+  42081f65-8788-4ec9-8124-35eec17ab2f7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Naam
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 46718f4d-f035-45b5-a8ee-c79afe18df14
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 432711b1-36db-4344-95b0-8006bc66058a # Afdeling
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0e702016-0720-4fbc-9cb3-334c58b7a4d3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 53983661-ec4c-4d0e-858d-15a3219382b6 # Leerkracht
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c2657b3b-c986-4327-a465-e838ccebcdfb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: acd50e80-e164-4765-abf6-809daf7015ba # Onderwijsvorm
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8ad6e5ab-18f9-43ab-97a4-2e59672475ee
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ee7276bb-3c8e-4c50-8a1a-907e917fa638 # Startdatum
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c07805ff-061c-4579-a94f-799e2fef9a8a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5404f384-4ef7-44f8-a47d-2e062b9a11fe # Einddatum
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e8d81570-b0fe-4c2e-b60a-34c1a1b1d64d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b96d1cb4-129a-4e8b-9374-48b381887e03 # Beschrijving
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b6b9ce4e-09b4-4d2a-a616-a519c0eba7f4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 103b0f04-038b-4817-b524-f19709ddcf2f # Cursusafbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 893249cd-4cbc-4361-94da-6ea1df854157
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1d2d2791-d901-44ba-8d3c-10539abe0bba
+        userCondition: null
+handle: course
+hasTitleField: true
+name: Cursus
+section: 129b299f-f5b5-4b03-815e-0f1e0c780b9a # Cursussen
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

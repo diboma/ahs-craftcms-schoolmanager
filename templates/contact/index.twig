@@ -1,0 +1,105 @@
+{# ================================================================ #}
+{# Props #}
+{# ================================================================ #}
+
+{# Macro errors #}
+{% macro errorList(errors) %}
+    {% if errors %}
+        {{ ul(errors, {class: 'errors'}) }}
+    {% endif %}
+{% endmacro %}
+
+{# ================================================================ #}
+{# Template #}
+{# ================================================================ #}
+{% extends "_layouts/base.twig" %}
+
+{% block main %}
+
+  <main class="mt-6 tw-container">
+
+    <h1 class="mb-6 text-center">Contacteer ons</h1>
+
+    {# Flash message #}
+    {% if craft.app.session.hasFlash('notice') %}
+      {% include '_components/alert.twig' with { 
+          type: 'info', message: craft.app.session.getFlash('notice') 
+        } %}
+    {% elseif craft.app.session.hasFlash('error') %}
+      {% include '_components/alert.twig' with { 
+          type: 'error', message: craft.app.session.getFlash('error') 
+        } %}
+    {% endif %}
+
+    {# Submission state #}
+    {% set submission = submission ?? null %}
+
+    {# Form #}
+    <form method="post" action="" accept-charset="UTF-8" class="mb-6 max-w-md mx-auto">
+      {{ csrfInput() }}
+      {{ actionInput('contact-form/send') }}
+      {# {{ redirectInput('contact/thanks') }} #}
+
+      {# Name #}
+      <div class="mb-6">
+        <h3><label for="from-name">Jouw naam</label></h3>
+        {{ input('text', 'fromName', submission.fromName ?? '', {
+            id: 'from-name',
+            autocomplete: 'name',
+            required: true,
+            class: 'tw-input',
+        }) }}
+        <span class="text-sm text-red-500">
+          {{ submission ? _self.errorList(submission.getErrors('fromName')) }}
+        </span>
+      </div>
+
+      {# Email #}
+      <div class="mb-6">
+        <h3><label for="from-email">Jouw e-mailadres</label></h3>
+        {{ input('email', 'fromEmail', submission.fromEmail ?? '', {
+            id: 'from-email',
+            autocomplete: 'email',
+            required: true,
+            class: 'tw-input',
+        }) }}
+        <span class="text-sm text-red-500">
+          {{ submission ? _self.errorList(submission.getErrors('fromEmail')) }}
+        </span>
+      </div>
+
+      {# Subject #}
+      <div class="mb-6">
+        <h3><label for="subject">Onderwerp</label></h3>
+        {{ input('text', 'subject', submission.subject ?? '', {
+            id: 'subject',
+            required: true,
+            class: 'tw-input',
+        }) }}
+        <span class="text-sm text-red-500">
+          {{ submission ? _self.errorList(submission.getErrors('subject')) }}
+        </span>
+      </div>
+
+      {# Message #}
+      <div class="mb-6">
+        <h3><label for="message">Bericht</label></h3>
+        {{ tag('textarea', {
+            text: submission.message ?? '',
+            id: 'message',
+            name: 'message',
+            rows: 7,
+            required: true,
+            class: 'tw-input',
+        }) }}
+        <span class="text-sm text-red-500">
+          {{ submission ? _self.errorList(submission.getErrors('message')) }}
+        </span>
+      </div>
+
+      <button type="submit" class="mt-4 btn btn-secondary">Verzenden</button>
+    </form>
+
+  </main>
+
+{% endblock %}

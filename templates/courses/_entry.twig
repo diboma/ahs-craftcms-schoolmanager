@@ -1,0 +1,57 @@
+{# ================================================================ #}
+{# Props #}
+{# ================================================================ #}
+{% set department = entry.department.one() %}
+{% set departmentImage = department.departmentImage.one() %}
+{% set filterId = department.id %}
+{% set courseImage = entry.courseImage.one() %}
+{% set teachers = entry.teacher.all() %}
+
+{# ================================================================ #}
+{# Template #}
+{# ================================================================ #}
+{% extends "_layouts/base.twig" %}
+
+{% block main %}
+
+<main class="tw-container mt-6">
+
+  <header>
+    <h1 class="mb-6 text-center sm:text-left">{{ entry.title }}</h1>
+
+    <div class="bg-slate-100 p-2 rounded flex flex-col justify-center items-center 
+                sm:flex-row sm:justify-start gap-4 mb-6">
+      <img src="{{ courseImage.getUrl('w128') }}" alt="{{ courseImage.title }}" class="w-32 h-32 object-contain aspect-square">
+      <div>
+        <p><span class="font-semibold">Afdeling:</span> {{department.title }}</p>
+        {% if teachers and teachers|length > 0 %}
+          <p><span class="font-semibold">Docent:</span> {{teachers|join(', ')}}</p>
+        {% endif %}
+        <p>
+          <span class="font-semibold">Onderwijsvorm:</span> 
+          {{entry.courseType}}
+        </p>
+        <p>
+          <span class="font-semibold">Startdatum:</span> 
+          {% if entry.startDate is defined and entry.startDate is not empty %}
+            {{entry.startDate|date('d-m-Y')}}
+          {% else %} - {% endif %}
+        </p>
+        <p>
+          <span class="font-semibold">Einddatum:</span> 
+          {% if entry.endDate is defined and entry.endDate is not empty %}
+            {{entry.endDate|date('d-m-Y')}}
+          {% else %} - {% endif %}
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <article class="mb-4">{{entry.description}}</article>
+
+  {% include "_components/nav-back-to.twig" %}
+
+
+</main>  
+
+{% endblock %}

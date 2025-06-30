@@ -1,0 +1,23 @@
+{% if departments is null or departments|length == 0 %}
+  {% include "_components/alert.twig" with { 
+    type: 'info', message: 'Sorry, geen afdelingen gevonden :-('
+  } %}
+{% endif %}
+
+{% if departments is not null and departments|length > 0 %}
+  <ul class="mt-4 mb-8 flex flex-row flex-wrap justify-center gap-6">
+    {% for department in departments %}
+      {% set image = department.departmentImage.one() %}
+      {% set url = url('/cursussen?fid=' ~ department.id) %}
+      <li class="w-[15rem] card cursor-pointer">
+        <a href="{{ url('afdelingen/' ~ department.slug) }}" class="h-full p-2 flex flex-col items-center ">
+          <img src="{{ image.getUrl('w128') }}" 
+               class="w-32 h-32 object-contain object-center aspect-square" 
+               alt="image.title"
+               {% if loop.index > 9 %}loading="lazy"{% endif %}>
+          {{ department.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
